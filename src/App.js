@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Select from 'react-select'
 
-function App() {
+
+
+
+
+const App = () => {
+
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }, {
+      value: 'milk', label: 'Milk'
+    }, {
+      value: 'orange', label: 'Orange'
+    }, {
+      value: 'apple', label: 'Apple'
+    }, {
+      value: 'lime', Label: 'Lime'
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Select options={options} />
+  )
 }
 
-export default App;
+export default App
